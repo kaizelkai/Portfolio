@@ -316,7 +316,6 @@ nav ul li a.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
   background-color: var(--button-bg);
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
   border-radius: 30px; /* Ajoutez cette ligne pour arrondir les bords */
