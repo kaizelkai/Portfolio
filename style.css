@@ -34,6 +34,7 @@ body {
     padding: 0;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme change */
+    overflow-x: hidden;
 }
 
 a {
@@ -303,7 +304,7 @@ nav ul li a.active {
 
 .hero-image {
   width: 350px;
-  
+
   clip-path: polygon(
     50% 0%, 
     93% 25%, 
