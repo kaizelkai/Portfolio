@@ -487,10 +487,41 @@ p .fa-phone-alt,
 .hp2 span{
   color: var(--button-bg); /* Jaune soleil éclatant */
 }
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
 /* Basic Responsiveness (add more detailed media queries based on needs) */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
     nav ul {
-        display: none; /* Hide for mobile, can add a hamburger menu */
+        display: none;
+        position: absolute;
+        align-items: center;      /* Centre verticalement les éléments */
+        text-align: center; 
+        top: 60px;
+        right: 20px;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        width: 200px;
+        box-shadow: 0 4px 8px var(--box-shadow-color);
+        border-radius: 8px;
+        z-index: 1001;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+    nav ul li {
+        width: 100%;              /* Prend toute la largeur du menu */
+        margin: 20px 0;
+        text-align: center; 
     }
 
     .hero-section{
