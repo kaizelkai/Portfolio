@@ -520,15 +520,15 @@ p .fa-phone-alt,
 
 .orbit-wrapper {
       position: relative;
-      width: 400px;
-      height: 400px;
+      width: 300px;
+      height: 300px;
     }
 
     .center-icon {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 60px;
+      width: 50px;
       transform: translate(-50%, -50%);
       z-index: 2;
     }
@@ -546,8 +546,8 @@ p .fa-phone-alt,
 
     .orbit-icon {
       position: absolute;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       transform: translate(-50%, -50%);
     }
 
