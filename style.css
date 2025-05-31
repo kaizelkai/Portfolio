@@ -135,7 +135,7 @@ nav ul li a.active {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 100px 100px;
+    padding: 100px 20px;
     min-height: 80vh;
     gap: 0px;
 }
