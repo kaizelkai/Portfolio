@@ -43,10 +43,26 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
+    const menuIcon = menuToggle.querySelector('i');
+    if (menuToggle && navMenu && menuIcon) {
+        menuToggle.addEventListener('click', (e) => {
             navMenu.classList.toggle('active');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+            e.stopPropagation(); // Empêche la propagation pour éviter la fermeture immédiate
+        });
+
+        // Ferme le menu si on clique en dehors
+        document.addEventListener('click', (e) => {
+            if (
+                navMenu.classList.contains('active') &&
+                !navMenu.contains(e.target) &&
+                !menuToggle.contains(e.target)
+            ) {
+                navMenu.classList.remove('active');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-times');
+            }
         });
     }
 });
-// ...existing code...
