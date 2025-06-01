@@ -66,3 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Menu actif selon la section visible
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#nav-menu li a');
+
+    function activateMenuOnScroll() {
+        let scrollY = window.pageYOffset;
+        sections.forEach(section => {
+            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop - 80; // Ajuste selon la hauteur du header
+            const sectionId = section.getAttribute('id');
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener('scroll', activateMenuOnScroll);
+    activateMenuOnScroll(); // Pour l'état initial
+});
