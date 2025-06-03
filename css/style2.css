@@ -1,0 +1,37 @@
+
+
+.contact h2 {
+  color: cyan;
+  border-bottom: 2px solid cyan;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.right {
+  flex: 2;
+  padding: 1rem 2rem;
+  min-width: 300px;
+}
+
+.right h1 {
+  font-size: 2rem;
+}
+
+.right h1 span {
+  color: cyan;
+}
+
+.right h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.right p {
+  text-align: justify;
+  line-height: 1.6;
+}
