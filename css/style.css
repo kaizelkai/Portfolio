@@ -142,6 +142,15 @@ nav ul li a.active {
     gap: 0px;
 }
 
+.hero-section2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 20px;
+    min-height: 80vh;
+    gap: 0px;
+}
+
 .hero-content h1 {
     font-size: 3rem;
     color: var(--text-primary);
@@ -501,7 +510,6 @@ footer {
     padding: 20px 0;
     color: var(--text-secondary);
     font-size: 0.9rem;
-    margin-top: 50px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .fa-sun {
@@ -526,6 +534,21 @@ p .fa-phone-alt,
 }
 /* Basic Responsiveness (add more detailed media queries based on needs) */
 @media (max-width: 768px) {
+    .hero-content h2 span{
+        font-size: 1.8rem;
+        text-align: left;
+        color: var(--accent-color);
+        margin-bottom: -20px;
+        transition: color 0.3s ease;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+        color: var(--text-primary);
+        margin-bottom: -30px;
+        transition: color 0.3s ease;
+        text-align: left;
+        margin-bottom: -20px;
+    }
     .menu-toggle {
         display: block;
     }
@@ -556,6 +579,15 @@ p .fa-phone-alt,
 
     .hero-section{
         flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 20px;
+    }
+    .hp1 {
+        text-align: left;
+    }
+
+    .hero-section2{
+        flex-direction: column;
         text-align: center;
         padding: 60px 20px;
     }
@@ -677,44 +709,6 @@ p .fa-phone-alt,
       animation: counterRotate 20s linear infinite;
     }
 
-@media (max-width: 768px) {
-    .left {
-        justify-content: space-around;
-        align-items: center;
-        gap: 40px;
-        transition: background-color 0.3s ease;
-        margin-bottom: -50px;
-        margin-top: -100px;
-    }
-    .left img{
-        max-width: 200px;
-        height: auto;
-    }
-    .left .contact {
-        margin-left: 10px;
-    }
-
-    .main-section {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-@media (min-width: 769px) {
-    .main-section {
-        display: flex;
-        padding: 2rem;
-        flex-wrap: wrap;
-    }
-    
-}
-.left {
-    justify-content: space-around;
-    align-items: center;
-    padding: 80px 20px;
-    gap: 40px;
-    transition: background-color 0.3s ease;
-}
 .contact h2 {
   color: var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
