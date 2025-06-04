@@ -92,3 +92,29 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', activateMenuOnScroll);
     activateMenuOnScroll(); // Pour l'état initial
 });
+
+// Filtrage des projets par catégorie
+document.addEventListener('DOMContentLoaded', () => {
+    const categorySpans = document.querySelectorAll('.project-categories .category');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    // ...existing code...
+    categorySpans.forEach(span => {
+        span.addEventListener('click', () => {
+            // Gère l'état actif
+            categorySpans.forEach(s => s.classList.remove('active'));
+            span.classList.add('active');
+
+            const filter = span.getAttribute('data-filter');
+            projectItems.forEach(item => {
+                const categories = item.getAttribute('data-category').split(',').map(cat => cat.trim());
+                if (filter === 'All' || categories.includes(filter)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+// ...existing code...
+});
